@@ -1,9 +1,11 @@
-import { TaskForm } from "./_components/TaskForm";
-import { crateTask } from "./_actions";
+import { TaskForm } from "../components/TaskForm";
+import { crateTask, getTasks, editTask, deleteTask } from "../actions";
 
-import { TaskListContainer } from "./_containers/TaskListContainer";
+import { TaskList } from "../components/TaskList";
 
 const Home = async () => {
+  const tasks = await getTasks();
+
   return (
     <div className="flex flex-col items-center min-h-screen bg-(--main-color)">
       <header className="pt-2.5 w-full text-center bg-white">
@@ -18,7 +20,11 @@ const Home = async () => {
             onSubmitName="Create task"
           />
         </div>
-        <TaskListContainer />
+        <TaskList
+          tasks={tasks}
+          editTaskAction={editTask}
+          deleteTaskAction={deleteTask}
+        />
       </main>
     </div>
   );

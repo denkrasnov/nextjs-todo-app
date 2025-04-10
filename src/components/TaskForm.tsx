@@ -4,8 +4,8 @@ import { FC, useState, useRef, ChangeEvent } from "react";
 import { Button } from "./Button";
 import { Notification } from "./Notification";
 import { Counter } from "./Counter";
-import type { Task } from "../types";
-import { errorMessages } from "../constants";
+import type { Task } from "../app/types";
+import { errorMessages } from "./constants";
 
 interface TaskFormProps {
   action: (formData: FormData) => void;

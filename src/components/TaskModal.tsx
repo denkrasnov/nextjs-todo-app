@@ -3,7 +3,7 @@ import { Modal } from "react-overlays";
 
 import { TaskForm } from "./TaskForm";
 import { XThinIcon } from "./icons/XThinIcon";
-import type { Task } from "../types";
+import type { Task } from "../app/types";
 import { Backdrop } from "./Backdrop";
 
 interface TaskModalProps {

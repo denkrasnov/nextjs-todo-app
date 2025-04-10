@@ -4,7 +4,7 @@ import { FC } from "react";
 import { Task } from "./Task";
 
 import { TaskModal } from "./TaskModal";
-import { Task as TaskType } from "../types";
+import { Task as TaskType } from "../app/types";
 import { useState } from "react";
 
 interface TaskListProps {
